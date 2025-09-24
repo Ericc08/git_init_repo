@@ -1,0 +1,273 @@
+@font-face {
+  font-family: "Barlow";
+  src: url("/CSS/fonts/Barlow-Regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  color: #2A4A5C;
+  background-color: #EFF6FF;
+  padding: 100px;
+}
+
+.container {
+  display: flex;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-family: "Barlow-Light", sans-serif;
+  font-size: 35px;
+  color: #7B8A92;
+}
+
+.charge {
+  margin-top: 10px;
+  font-size: 130%;
+  color: #96A5B1;
+}
+
+.left {
+  flex: 60%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left .logo {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  width: 150px; 
+  height: auto;
+  
+}
+
+.left img {
+  width: 100%;
+  height: auto;
+}
+
+.right {
+  flex: 40%;
+
+  padding: 100px;
+  background-color: white;
+}
+
+.social.buttons {
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 10px 16px;
+  flex: 1;
+  color: white;
+  text-decoration: none;
+  font-weight: 450;
+
+  cursor: pointer;
+}
+
+.img.facebook {
+  width: 8%;
+  height: auto;
+}
+
+.img.linkedin {
+  width: 8%;
+  height: auto;
+}
+
+.btn.facebook {
+  background-color: #255A9B;
+  width: 270px;
+}
+.btn.facebook:hover {
+  opacity: 0.9;
+}
+.btn.linkedin {
+  background-color: #0076B6;
+  width: 270px;
+}
+.btn.linkedin:hover {
+  opacity: 0.9;
+}
+
+.or-separator {
+ display: flex;
+  align-items: center;
+  text-align: center;
+  color: #AFAFAF;
+  font-size: 14px;
+  margin: 35px 0;
+}
+
+.or-separator::before,
+.or-separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #bebebe;
+}
+
+.or-separator:not(:empty)::before {
+  margin-right: 20px;
+  margin-left: 100px;
+}
+
+.or-separator:not(:empty)::after {
+  margin-left: 20px;
+  margin-right: 100px;
+}
+
+
+.input-row {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+.input-group {
+  position: relative;
+  flex: 1;
+}
+
+.input-group label {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  font-size: 13px;
+  color: #AFAFAF;
+  background: white;
+
+  pointer-events: none;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 32px 12px 12px 12px;
+  font-size: 15px;
+  border: 1px solid #EEEEEE;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  border-color: #1877f2;
+  box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.07);
+}
+
+h3 {
+  margin-top: 60px;
+  font-family: "Barlow-Light", sans-serif;
+  font-size: 20px;
+  color: #7B8A92;
+}
+
+.who {
+  margin-bottom: 40px;
+  font-size: 15px;
+  color: #96A5B1;
+}
+ .investor-type{
+margin-top: 30px;
+margin-bottom: 140px;
+display: flex;
+gap: 5px;
+}  
+
+
+.investor-type label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  
+  margin-right: 40px;
+  font-size: larger;
+}
+
+.investor-type input {
+  display: none;
+}
+
+.custom-radio {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgb(211, 211, 211);
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+}
+
+.investor-type input:checked + .custom-radio {
+  border-color: #3698FB;
+}
+
+.info {
+  margin-left: 5px;         
+  width: 10px;
+  height: 10px;
+  border: 1px solid #AFAFAF;
+  border-radius: 50%;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #AFAFAF;
+  opacity: 0.9;
+}
+
+.tip {
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  max-width: 280px;
+  background: #FFF;
+  position: relative;
+  text-align: left;
+  padding: 10px 18px;
+  position: absolute;
+  top: 80%;
+  transition: opacity 0.3s;
+  /* z-index: 10; */
+  font-size: 15px;
+  line-height: 1.3;
+  box-shadow:
+    0 6px 12px rgba(0,0,0,0.15),   
+    6px 0 12px rgba(0,0,0,0.1),    
+   -6px 0 12px rgba(0,0,0,0.1); 
+}
+
+.info:hover .tip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.terms {
+  
+  opacity: 0.5;
+}
+.create-btn {
+  margin-top: 60px;
+  width: 300px;
+  height: 50px;
+  padding: 12px;
+  background-color: #3698FB;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: larger;
+}
